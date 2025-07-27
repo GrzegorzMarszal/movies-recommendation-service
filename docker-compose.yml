@@ -1,0 +1,11 @@
+services:
+  php:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+      args:
+        user: movies_recomendation_service
+        uid: 1000
+    container_name: movies_recomendation_service
+    volumes:
+      - ./src:/var/www/
